@@ -1,0 +1,104 @@
+﻿
+src\CutTheRopeDX.Core\Commons\HLiftScrollbar.cs:21:            if (InitWithTexture(Application.GetTexture(resourceName)) != null)
+src\CutTheRopeDX.Core\Commons\HLiftScrollbar.cs:23:                SetDrawQuad(bq);
+src\CutTheRopeDX.Core\Framework\Core\Application.cs:193:        internal static Texture2D GetTexture(string textureResourceName)
+src\CutTheRopeDX.Core\Framework\Core\ResourceMgr.cs:412:            Font font = new Font().InitWithVariableSizeCharscharMapFileKerning(charsData, Application.GetTexture(resourceName));
+src\CutTheRopeDX.Core\Framework\Core\ResourceMgr.cs:1044:                _ = Application.GetTexture(localizedName);
+src\CutTheRopeDX.Core\Framework\Helpers\GameObject.cs:19:        public override Image InitWithTexture(Texture2D texture)
+src\CutTheRopeDX.Core\Framework\Helpers\GameObject.cs:21:            if (base.InitWithTexture(texture) != null)
+src\CutTheRopeDX.Core\Framework\Media\IVideoPlayer.cs:36:        ITextureHandle GetTexture();
+src\CutTheRopeDX.Core\Framework\Media\MovieMgr.cs:57:        public ITextureHandle GetTexture()
+src\CutTheRopeDX.Core\Framework\Media\MovieMgr.cs:59:            return videoPlayer.GetTexture();
+src\CutTheRopeDX.Core\Framework\Media\VideoPlayerNone.cs:27:        public ITextureHandle GetTexture()
+src\CutTheRopeDX.Core\Framework\Visual\FingerTrace.cs:367:            image.SetDrawQuad(sprite.QuadIndex);
+src\CutTheRopeDX.Core\Framework\Visual\Font.cs:19:            charmap = new Image().InitWithTexture(charmapfile);
+src\CutTheRopeDX.Core\Framework\Visual\HorizontallyTiledImage.cs:11:        public override Image InitWithTexture(Texture2D t)
+src\CutTheRopeDX.Core\Framework\Visual\HorizontallyTiledImage.cs:13:            if (base.InitWithTexture(t) != null)
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:22:            Texture2D texture2D = Application.GetTexture(textureResourceName);
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:36:            Texture2D texture = Application.GetTexture(textureResourceName);
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:48:            Texture2D texture2D = Application.GetTexture(textureResourceName);
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:103:            return new Image().InitWithTexture(t);
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:145:            _ = element.InitWithTexture(Application.GetTexture(resourceName));
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:148:                element.SetDrawQuad(quad);
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:159:        public virtual Image InitWithTexture(Texture2D t)
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:165:                SetDrawQuad(0);
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:188:        public virtual void SetDrawQuad(int n)
+src\CutTheRopeDX.Core\Framework\Visual\Image.cs:345:                SetDrawQuad(a.actionParam);
+src\CutTheRopeDX.Core\Framework\Visual\VerticallyTiledImage.cs:11:        public override Image InitWithTexture(Texture2D t)
+src\CutTheRopeDX.Core\Framework\Visual\VerticallyTiledImage.cs:13:            if (base.InitWithTexture(t) != null)
+src\CutTheRopeDX.Core\GameMain\BambooTube.cs:28:            _ = InitWithTexture(Application.GetTexture(Resources.Img.ObjBambooTube));
+src\CutTheRopeDX.Core\GameMain\BambooTube.cs:30:            SetDrawQuad(BambooCoreQuad);
+src\CutTheRopeDX.Core\GameMain\Bouncer.cs:33:            if (firstQuad == -1 || InitWithTexture(Application.GetTexture(Resources.Img.ObjBouncer)) == null)
+src\CutTheRopeDX.Core\GameMain\Bouncer.cs:38:            SetDrawQuad(firstQuad);
+src\CutTheRopeDX.Core\GameMain\BoxOpenClose.cs:416:                int quadCount = Application.GetTexture(confettiResource).quadRects?.Length ?? 0;
+src\CutTheRopeDX.Core\GameMain\BoxOpenClose.Experiments.cs:66:            Vector frameSize = Application.GetTexture(atlas).preCutSize;
+src\CutTheRopeDX.Core\GameMain\Bungee.cs:476:            Texture2D texture = Application.GetTexture(Resources.Img.ObjExpChain);
+src\CutTheRopeDX.Core\GameMain\Bungee.cs:1010:                texture = Application.GetTexture(Resources.Img.XmasLights);
+src\CutTheRopeDX.Core\GameMain\CandySelectionView.cs:165:                buttonData.UpImage.SetDrawQuad(bgUpQuad);
+src\CutTheRopeDX.Core\GameMain\CandySelectionView.cs:166:                buttonData.DownImage.SetDrawQuad(bgDownQuad);
+src\CutTheRopeDX.Core\GameMain\CandySelectionView.cs:253:            upImage.SetDrawQuad(quad);
+src\CutTheRopeDX.Core\GameMain\CandySelectionView.cs:254:            downImage.SetDrawQuad(quad);
+src\CutTheRopeDX.Core\GameMain\FlashXmlImage.cs:44:        public override void SetDrawQuad(int n)
+src\CutTheRopeDX.Core\GameMain\FlashXmlImage.cs:46:            base.SetDrawQuad(n);
+src\CutTheRopeDX.Core\GameMain\FlashXmlOneShotEffect.cs:66:            _ = root.InitWithTexture(Application.GetTexture(_textureResourceName));
+src\CutTheRopeDX.Core\GameMain\FlashXmlOneShotEffect.cs:67:            root.SetDrawQuad(0);
+src\CutTheRopeDX.Core\GameMain\FlashXmlTargetAnimationBackend.cs:130:            _ = stageRoot.InitWithTexture(Application.GetTexture(Resources.Img.CharAnimationsSmooth));
+src\CutTheRopeDX.Core\GameMain\FlashXmlTargetAnimationBackend.cs:131:            stageRoot.SetDrawQuad(0);
+src\CutTheRopeDX.Core\GameMain\FlashXmlTargetAnimationBackend.cs:533:                part.SetDrawQuad(partDefinition.QuadToDraw);
+src\CutTheRopeDX.Core\GameMain\GameController.cs:373:            star1.SetDrawQuad(result.StarsCollected > 0 ? 13 : 14);
+src\CutTheRopeDX.Core\GameMain\GameController.cs:374:            star2.SetDrawQuad(result.StarsCollected > 1 ? 13 : 14);
+src\CutTheRopeDX.Core\GameMain\GameController.cs:375:            star3.SetDrawQuad(result.StarsCollected > 2 ? 13 : 14);
+src\CutTheRopeDX.Core\GameMain\GameScene.Draw.cs:62:                        Texture2D p2Texture = Application.GetTexture(p2ResourceName);
+src\CutTheRopeDX.Core\GameMain\GameScene.Init.cs:70:            backTexture = Application.GetTexture(boxBackground);
+src\CutTheRopeDX.Core\GameMain\GameScene.Init.cs:80:                hudStar[i].SetDrawQuad(HudUiStarFirstQuad);
+src\CutTheRopeDX.Core\GameMain\GameScene.Initialize.cs:309:                hudStar[i].SetDrawQuad(HudUiStarFirstQuad);
+src\CutTheRopeDX.Core\GameMain\GameScene.Input.cs:274:                            gun.Front.SetDrawQuad(Grab.GunDisabledFrontQuad);
+src\CutTheRopeDX.Core\GameMain\Grab.cs:465:                Texture2D beeTexture = Application.GetTexture(Resources.Img.ObjBee);
+src\CutTheRopeDX.Core\GameMain\Grab.cs:502:            back?.SetDrawQuad(detached ? 1 : 3);
+src\CutTheRopeDX.Core\GameMain\Grab.cs:503:            front?.SetDrawQuad(detached ? 2 : 4);
+src\CutTheRopeDX.Core\GameMain\GunSource.cs:116:            Front?.SetDrawQuad(HasFired || disabled ? Grab.GunDisabledFrontQuad : Grab.GunFrontQuad);
+src\CutTheRopeDX.Core\GameMain\Lantern.cs:24:            if (InitWithTexture(Application.GetTexture(Resources.Img.ObjLantern)) == null)
+src\CutTheRopeDX.Core\GameMain\LoadingView.cs:104:            Texture2D texture = Application.GetTexture(boxCover);
+src\CutTheRopeDX.Core\GameMain\LoadingView.cs:116:            Texture2D levelUiTexture = Application.GetTexture(Resources.Img.MenuLevelUi);
+src\CutTheRopeDX.Core\GameMain\LoadingView.Experiments.cs:154:            Texture2D backdrop = Application.GetTexture(Resources.BackgroundImg.MenuExpLoadingBgr);
+src\CutTheRopeDX.Core\GameMain\LoadingView.Experiments.cs:155:            Texture2D scroll = Application.GetTexture(Resources.Img.MenuExpLoadingScroll);
+src\CutTheRopeDX.Core\GameMain\LoadingView.Experiments.cs:175:            Texture2D atlas = Application.GetTexture(Resources.Img.MenuExpLoading);
+src\CutTheRopeDX.Core\GameMain\MechanicalHand.cs:66:                Texture2D texture = Application.GetTexture(Resources.Img.ObjRoboHand);
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:144:            Texture2D texture = Application.GetTexture(resourceName);
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:191:            Texture2D texture = Application.GetTexture(resourceName);
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:211:            Texture2D texture = Application.GetTexture(resourceName);
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:710:                Texture2D texture = Application.GetTexture(Resources.Img.MenuExtraButtons);
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:1046:            int quadCount = Application.GetTexture(resourceName).quadRects?.Length ?? 0;
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:1233:            Texture2D texture = Application.GetTexture(Resources.Img.MenuPackUI);
+src\CutTheRopeDX.Core\GameMain\MenuController.cs:2740:                Texture2D texture = Application.GetTexture(Resources.Img.MenuPackUI);
+src\CutTheRopeDX.Core\GameMain\MenuController.Layout.cs:645:            Texture2D texture = Application.GetTexture(Resources.Img.MenuExtraButtons);
+src\CutTheRopeDX.Core\GameMain\Mouse.cs:304:                sprites.Value.Body.SetDrawQuad(CandyInMouthQuad);
+src\CutTheRopeDX.Core\GameMain\PauseSwitcher.cs:38:            _ = switcher.InitWithTexture(Application.GetTexture(Resources.Img.ObjPause));
+src\CutTheRopeDX.Core\GameMain\PauseSwitcher.cs:39:            switcher.SetDrawQuad(RunningQuad);
+src\CutTheRopeDX.Core\GameMain\PauseSwitcher.cs:48:            SetDrawQuad(FrozenQuad);
+src\CutTheRopeDX.Core\GameMain\PauseSwitcher.cs:55:            SetDrawQuad(RunningQuad);
+src\CutTheRopeDX.Core\GameMain\PauseSwitcher.cs:65:            _ = animationRoot.InitWithTexture(Application.GetTexture(Resources.Img.ObjPause));
+src\CutTheRopeDX.Core\GameMain\PauseSwitcher.cs:66:            animationRoot.SetDrawQuad(0);
+src\CutTheRopeDX.Core\GameMain\Rocket.cs:22:        public override Image InitWithTexture(Texture2D tx)
+src\CutTheRopeDX.Core\GameMain\Rocket.cs:24:            if (base.InitWithTexture(tx) != null)
+src\CutTheRopeDX.Core\GameMain\Snail.cs:137:        public override Image InitWithTexture(Texture2D t)
+src\CutTheRopeDX.Core\GameMain\Snail.cs:139:            if (base.InitWithTexture(t) == null)
+src\CutTheRopeDX.Core\GameMain\Snail.cs:191:            wakeUp.SetDrawQuad(SnailWakeStartQuad);
+src\CutTheRopeDX.Core\GameMain\Snail.cs:201:            sleep.SetDrawQuad(SnailSleepStartQuad);
+src\CutTheRopeDX.Core\GameMain\SnowfallOverlay.cs:286:                texture = Application.GetTexture(Resources.Img.Snowflakes);
+src\CutTheRopeDX.Core\GameMain\Spikes.cs:28:            if (textureName == null || InitWithTexture(Application.GetTexture(textureName)) == null)
+src\CutTheRopeDX.Core\GameMain\Spikes.cs:34:                SetDrawQuad(spikeQuad);
+src\CutTheRopeDX.Core\GameMain\Star.cs:124:                timedAnim.SetDrawQuad(TimedEmptyQuad);
+src\CutTheRopeDX.Core\GameMain\StartupController.cs:96:            _ = animRoot.InitWithTexture(Application.GetTexture(Resources.Img.ZeptoLabLogoAnim));
+src\CutTheRopeDX.Core\GameMain\StartupController.cs:97:            animRoot.SetDrawQuad(0);
+src\CutTheRopeDX.Core\GameMain\StartupController.cs:398:                        Texture2D barTex = Application.GetTexture(Resources.Img.ZeptoLabLogoLoading);
+src\CutTheRopeDX.Core\GameMain\WaterElement.cs:91:                _ = Application.GetTexture(Resources.Img.WaterTile);
+src\CutTheRopeDX.Core\GameMain\WaterElement.cs:162:            if (InitWithTexture(Application.GetTexture(Resources.Img.WaterTile)) == null)
+src\CutTheRopeDX.Core\GameMain\FingerTraces\LightningFingerTrace.cs:251:            Texture2D texture = Application.GetTexture(Resources.Img.FingerTraces);
+src\CutTheRopeDX.Core\GameMain\LoadObjects\LoadSocks.cs:54:            sock.SetDrawQuad(pattern);
+src\CutTheRopeDX.Core\GameMain\LoadObjects\LoadTarget.cs:57:            Texture2D supportTexture = Application.GetTexture(supportResource);
+src\CutTheRopeDX.Core\GameMain\Tutorials\TutorialVisuals.cs:86:            _ = sign.InitWithTexture(texture);
+src\CutTheRopeDX.Core\GameMain\Tutorials\TutorialVisuals.cs:87:            sign.SetDrawQuad(quad);
+src\CutTheRopeDX.Core\GameMain\Tutorials\TutorialVisuals.cs:107:            Texture2D atlas = Application.GetTexture(Resources.Img.TutorialSigns);
+
+

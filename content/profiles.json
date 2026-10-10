@@ -1,0 +1,21 @@
+﻿{
+  "Cut The Rope Classic": {
+    "maps": "maps"
+  },
+  "Cut The Rope Experiencia": {
+    "maps": "maps2"
+  },
+  "Cut The Rope Time Travel": {
+    "maps": "maps3"
+  },
+  "Cut The Rope - Experiments": {
+    "maps": "maps4",
+    "menu": "experiments"
+  },
+  "Cut The Rope - Victory": {
+    "maps": "maps5"
+  }
+}
+
+
+

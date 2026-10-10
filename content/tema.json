@@ -1,0 +1,37 @@
+﻿[
+  {
+    "id": "classic",
+    "name": "Clássico",
+    "menuStyle": "classic",
+    "manualTheme": 0
+  },
+  {
+    "id": "experiments",
+    "name": "Experiments",
+    "menuStyle": "experiments",
+    "manualTheme": 1
+  },
+  {
+    "id": "halloween",
+    "name": "Halloween",
+    "menuStyle": "classic",
+    "manualTheme": 2,
+    "menu_pack_selection.png": "menu_pack_halloween.png"
+  },
+  {
+    "id": "christmas",
+    "name": "Natal",
+    "menuStyle": "classic",
+    "manualTheme": 3
+  },
+  {
+    "id": "teste",
+    "name": "TESTE",
+    "menuStyle": "classic",
+    "manualTheme": 4,
+    "background": "menu_bgr",
+    "menu_pack_selection.png": "menu_pack_halloween.png",
+    "confetti_particles.png": "fx_halloween.png",
+    "menu_result_screen_halloween": "menu_result_screen_halloween2"
+  }
+]
