@@ -199,8 +199,8 @@ namespace CutTheRopeDX.GameMain
                 // Apply horizontal swinging motion
                 float swingOffset = MathF.Sin(flake.SwingPhase) * flake.SwingAmplitude;
                 float currentX = flake.BaseX + swingOffset;
-                float drawX = currentX - (scaledPreWidth / 2f);
-                float drawY = flake.Y - (scaledPreHeight / 2f);
+                float drawX = currentX - (scaledPreWidth / 2f) + scaledOffsetX;
+                float drawY = flake.Y - (scaledPreHeight / 2f) + scaledOffsetY;
 
                 // Calculate twinkling alpha with global fade multiplier
                 float alpha = flake.AlphaBase + (MathF.Sin(flake.TwinklePhase) * flake.AlphaRange);
@@ -520,6 +520,7 @@ namespace CutTheRopeDX.GameMain
         public static partial void TextureUnavailable(ILogger logger, Exception exception);
     }
 }
+
 
 
 
