@@ -224,8 +224,8 @@ namespace CutTheRopeDX.Framework.Core
             Vector offset = new(0f, 0f);
             if (entry.Data.TryGetProperty("spriteSourceSize", out JsonElement offsetElement) && offsetElement.ValueKind == JsonValueKind.Object)
             {
-                float offsetX = ReadFloat(offsetElement, "x") * metadataScale;
-                float offsetY = ReadFloat(offsetElement, "y") * metadataScale;
+                float offsetX = ReadFloat(offsetElement, "x");
+                float offsetY = ReadFloat(offsetElement, "y");
                 if (offsetX != 0f || offsetY != 0f)
                 {
                     atlas.HasNonZeroOffset = true;
@@ -337,4 +337,6 @@ namespace CutTheRopeDX.Framework.Core
         public static partial void RotatedFrame(ILogger logger, string frameName);
     }
 }
+
+
 
