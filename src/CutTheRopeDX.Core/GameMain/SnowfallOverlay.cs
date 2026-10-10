@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using CutTheRopeDX.Framework;
@@ -176,13 +176,17 @@ namespace CutTheRopeDX.GameMain
 
             Vector[] offsets = texture.quadOffsets;
             Rectangle[] rects = texture.quadRects;
-            Vector preCut = texture.preCutSize;
+            Vector[] preCutSizes = texture.preCutSizes;
+            Vector defaultPreCut = texture.preCutSize;
 
             for (int i = 0; i < snowflakes.Count; i++)
             {
                 Snowflake flake = snowflakes[i];
                 Rectangle rect = rects[flake.FrameIndex];
                 Vector offset = offsets[flake.FrameIndex];
+
+                Vector preCut = preCutSizes != null && flake.FrameIndex < preCutSizes.Length ? preCutSizes[flake.FrameIndex] : defaultPreCut;
+
 
                 // Calculate scaled dimensions with safety checks for invalid texture data
                 float safePreCutWidth = IsFinite(preCut.X) && preCut.X > 0 && preCut.X < 10000 ? preCut.X : rect.w;
@@ -486,7 +490,7 @@ namespace CutTheRopeDX.GameMain
             /// <summary>Frequency of swinging motion in radians per second.</summary>
             public float SwingSpeed;
 
-            /// <summary>Current phase of swinging motion (0 to 2π).</summary>
+            /// <summary>Current phase of swinging motion (0 to 2Ï€).</summary>
             public float SwingPhase;
 
             /// <summary>Base opacity value before twinkling is applied.</summary>
@@ -495,7 +499,7 @@ namespace CutTheRopeDX.GameMain
             /// <summary>Range of opacity variation for twinkling effect.</summary>
             public float AlphaRange;
 
-            /// <summary>Current phase of twinkling animation (0 to 2π).</summary>
+            /// <summary>Current phase of twinkling animation (0 to 2Ï€).</summary>
             public float TwinklePhase;
 
             /// <summary>Frequency of twinkling in radians per second.</summary>
@@ -516,3 +520,8 @@ namespace CutTheRopeDX.GameMain
         public static partial void TextureUnavailable(ILogger logger, Exception exception);
     }
 }
+
+
+
+
+
