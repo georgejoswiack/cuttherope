@@ -84,22 +84,6 @@ namespace CutTheRopeDX.Framework.Core
             }
 
             using JsonDocument document = JsonDocument.Parse(json);
-            float metadataScale = 1f;
-            if (document.RootElement.TryGetProperty("meta", out JsonElement metaElement)
-                && metaElement.ValueKind == JsonValueKind.Object
-                && metaElement.TryGetProperty("scale", out JsonElement scaleElement))
-            {
-                string scaleText = scaleElement.ValueKind == JsonValueKind.String
-                    ? scaleElement.GetString()
-                    : scaleElement.ToString();
-
-                if (float.TryParse(scaleText, NumberStyles.Float, CultureInfo.InvariantCulture, out float parsedScale)
-                    && float.IsFinite(parsedScale)
-                    && parsedScale > 0f)
-                {
-                    metadataScale = parsedScale;
-                }
-            }
             if (!document.RootElement.TryGetProperty("frames", out JsonElement framesElement))
             {
                 throw new InvalidDataException("TexturePacker atlas is missing the frames block.");
@@ -121,7 +105,7 @@ namespace CutTheRopeDX.Framework.Core
 
             foreach (FrameEntry entry in entries)
             {
-                ParseFrame(entry, atlas, rectSizes, metadataScale);
+                ParseFrame(entry, atlas, rectSizes);
             }
 
             if (options?.NormalizeOffsetsToCenter == true)
@@ -199,7 +183,7 @@ namespace CutTheRopeDX.Framework.Core
         /// <param name="entry">Frame entry to parse.</param>
         /// <param name="atlas">Output atlas receiving parsed frame data.</param>
         /// <param name="rectSizes">List tracking parsed rectangle sizes for later offset normalization.</param>
-        private static void ParseFrame(FrameEntry entry, ParsedTexturePackerAtlas atlas, List<(float w, float h)> rectSizes, float metadataScale)
+        private static void ParseFrame(FrameEntry entry, ParsedTexturePackerAtlas atlas, List<(float w, float h)> rectSizes)
         {
             if (!entry.Data.TryGetProperty("frame", out JsonElement frameElement) || frameElement.ValueKind != JsonValueKind.Object)
             {
@@ -236,8 +220,8 @@ namespace CutTheRopeDX.Framework.Core
 
             if (entry.Data.TryGetProperty("sourceSize", out JsonElement sourceSize) && sourceSize.ValueKind == JsonValueKind.Object)
             {
-                float sourceWidth = ReadFloat(sourceSize, "w") * metadataScale;
-                float sourceHeight = ReadFloat(sourceSize, "h") * metadataScale;
+                float sourceWidth = ReadFloat(sourceSize, "w");
+                float sourceHeight = ReadFloat(sourceSize, "h");
                 atlas.SourceSizes.Add(new Vector(sourceWidth, sourceHeight));
                 if (sourceWidth > atlas.PreCutWidth)
                 {
@@ -337,6 +321,7 @@ namespace CutTheRopeDX.Framework.Core
         public static partial void RotatedFrame(ILogger logger, string frameName);
     }
 }
+
 
 
 
