@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using CutTheRopeDX.Framework;
@@ -212,7 +212,7 @@ namespace CutTheRopeDX.GameMain
                 Renderer.PushMatrix();
                 Renderer.Translate(drawX, drawY, 0f);
                 Renderer.Scale(flake.Scale, flake.Scale, 1f);
-                Texture2D.DrawQuadAtPoint(texture, flake.FrameIndex, vectZero);
+                Texture2D.DrawRectAtPoint(texture, rect, vectZero);
                 Renderer.PopMatrix();
             }
 
@@ -486,7 +486,7 @@ namespace CutTheRopeDX.GameMain
             /// <summary>Frequency of swinging motion in radians per second.</summary>
             public float SwingSpeed;
 
-            /// <summary>Current phase of swinging motion (0 to 2π).</summary>
+            /// <summary>Current phase of swinging motion (0 to 2Ï€).</summary>
             public float SwingPhase;
 
             /// <summary>Base opacity value before twinkling is applied.</summary>
@@ -495,7 +495,7 @@ namespace CutTheRopeDX.GameMain
             /// <summary>Range of opacity variation for twinkling effect.</summary>
             public float AlphaRange;
 
-            /// <summary>Current phase of twinkling animation (0 to 2π).</summary>
+            /// <summary>Current phase of twinkling animation (0 to 2Ï€).</summary>
             public float TwinklePhase;
 
             /// <summary>Frequency of twinkling in radians per second.</summary>
@@ -516,3 +516,4 @@ namespace CutTheRopeDX.GameMain
         public static partial void TextureUnavailable(ILogger logger, Exception exception);
     }
 }
+
